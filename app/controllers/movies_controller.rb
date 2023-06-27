@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movie= Movie.all
+    # almacenamos todas las peliculas
+    @movies= Movie.all
   end
 
   def new
