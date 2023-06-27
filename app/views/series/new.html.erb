@@ -1,2 +1,13 @@
-<h1>Series#new</h1>
-<p>Find me in app/views/series/new.html.erb</p>
+<%# creando furmulario de series %>
+<h2>Fomulario Series</h2>
+
+<%= form_with model:@serie, method: :post do |form|%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis %>
+
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+<% end %>
