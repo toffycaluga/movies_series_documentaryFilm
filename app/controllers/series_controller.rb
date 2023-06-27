@@ -1,6 +1,6 @@
 class SeriesController < ApplicationController
   def index
-    @serie=Serie.all
+    @series=Serie.all
   end
 
   def new

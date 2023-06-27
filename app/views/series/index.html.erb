@@ -1,3 +1,8 @@
 <%= link_to 'Agregar Serie', series_new_path %>
-<h1>Series#index</h1>
-<p>Find me in app/views/series/index.html.erb</p>
+<% @series.each do |serie|%>
+    <article>
+        <header><%=serie[:name]%></header>
+            <%=serie[:description]%>
+        <footer>Director :<%=serie[:director]%> </footer>
+    </article>
+<% end %>
