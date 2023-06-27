@@ -1,3 +1,9 @@
-<%= link_to 'Agregar pelicula', documentary_film_new_path %>
-<h1>DocumentaryFilm#index</h1>
-<p>Find me in app/views/documentary_film/index.html.erb</p>
+<%= link_to 'Agregar Documental', documentary_film_new_path %>
+<% @documentary_films.each do |df|%>
+    <article>
+  <header><%=df[:name]%></header>
+  <%=df[:description]%>
+  <footer>Director <%=df[:director]%> </footer>
+</article>
+
+<% end %>
