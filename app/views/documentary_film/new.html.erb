@@ -1,2 +1,13 @@
-<h1>DocumentaryFilm#new</h1>
-<p>Find me in app/views/documentary_film/new.html.erb</p>
+<h2>Formulario documentales</h2>
+<%# creando furmulario de DocumentaryFilm %>
+
+<%= form_with model:@documentary_film, method: :post do |form|%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis %>
+
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+<% end %>
