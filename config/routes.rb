@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'documentary_film/index'
+  get 'documentary_film',to:"documentary_film#index"
   get 'documentary_film/new'
   get 'documentary_film/create'
-  get 'series/index'
+  get 'series',to:"series#index"
   get 'series/new'
   get 'series/create'
-  get 'movies/index'
+  get 'movies',to:"movies#index"
   get 'movies/new', to:'movies#new'
   get 'movies/create'
 
