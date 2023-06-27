@@ -1,2 +1,12 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<%# creando furmulario de movies %>
+
+<%= form_with model:@movie, method: :post do |form|%>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis %>
+
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+<% end %>
