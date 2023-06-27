@@ -1,9 +1,14 @@
 <%= link_to 'Agregar Documental', documentary_film_new_path %>
+<%# imprimiendo documentales %>
+<div class="grid">
 <% @documentary_films.each do |df|%>
-    <article>
-  <header><%=df[:name]%></header>
-  <%=df[:description]%>
-  <footer>Director <%=df[:director]%> </footer>
-</article>
+    <div>
+        <article>
+            <header><%=df[:name]%></header>
+            <%=df[:synopsis]%>
+            <footer>Director <%=df[:director]%> </footer>
+        </article>
+    </div>
 
 <% end %>
+</div>

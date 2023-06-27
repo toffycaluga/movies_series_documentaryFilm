@@ -1,8 +1,13 @@
 <%= link_to 'Agregar Serie', series_new_path %>
+<%# imprimiendo series %>
+<div class="grid">
 <% @series.each do |serie|%>
-    <article>
-        <header><%=serie[:name]%></header>
-            <%=serie[:description]%>
-        <footer>Director :<%=serie[:director]%> </footer>
-    </article>
+   <div>
+        <article>
+            <header><%=serie[:name]%></header>
+            <%=serie[:synopsis]%>
+            <footer>Director <%=serie[:director]%> </footer>
+        </article>
+    </div>  
 <% end %>
+</div>

@@ -1,9 +1,14 @@
 <%= link_to 'Agregar pelicula', movies_new_path %>
+<%# imprimiendo peliculas %>
+<div class="grid">
 <% @movies.each do |movie|%>
-    <article>
-  <header><%=movie[:name]%></header>
-  <%=movie[:description]%>
-  <footer>Director <%=movie[:director]%> </footer>
-</article>
+    <div>
+        <article>
+            <header><%=movie[:name]%></header>
+            <%=movie[:synopsis]%>
+            <footer>Director <%=movie[:director]%> </footer>
+        </article>
+    </div>
 <% end %>
+</div>
 
